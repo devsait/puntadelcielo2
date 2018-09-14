@@ -1,0 +1,21 @@
+Program c:\vfp6\vfp6\puntadelcielo\casinopos.prg has the following errors:
+    Unknown EXISTECAMPO - Undefined
+    Unknown QUITIT - Undefined
+
+Visual Class Library c:\vfp6\msllib\sendrep.vcx has the following errors:
+    Unknown MODIFTO - Undefined
+
+Form c:\vfp6\vfp6\puntadelcielo\opencta.scx has the following errors:
+    Form PIDEVEND - Undefined
+
+Form c:\vfp6\vfp6\puntadelcielo\addartcs.scx has the following errors:
+    Form PIDEVEND - Undefined
+
+Form c:\vfp6\vfp6\puntadelcielo\devpag.scx has the following errors:
+    Unknown SALIDA - Undefined
+    Unknown SDACTREG - Undefined
+    Unknown ADDCXC - Undefined
+
+Form c:\vfp6\vfp6\puntadelcielo\addartman.scx has the following errors:
+    Form PIDEVEND - Undefined
+
