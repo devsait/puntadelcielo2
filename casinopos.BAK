@@ -173,6 +173,18 @@
  		Aviso('Se ha creado el campo de NUMALM en CtasPos')
  	EndIf
  	
+ 	If Not ExisteCampo('CtasPosdet.MEDIDA')
+ 		Alter Table CtasPos Add		MEDIDA		C(1)
+ 		
+ 		Close Databases
+ 		If Not ExisteCampo('CtasPosdet.MEDIDA')
+ 			Alerta('No se pudo crear el campo NUMALM en CtasPos')
+ 			QuitIt
+ 		EndIF
+ 	
+ 		Aviso('Se ha creado el campo de MEDIDA en CtasPosdet')
+ 	EndIf
+ 	
  	If Not ExisteCampo('Almacen.PIDEVEND')
  		Alter Table Almacen Add PIDEVEND	L(1)
  		Alter Table Almacen Add TOUCH		L(1)
@@ -234,6 +246,44 @@
 		EndIf
 		
 		Aviso('Se ha creado el campo SALDO en Succli')
+	EndIf
+	
+	If Not ExisteCampo('Almacen.LIMITE')
+		Alter Table Almacen	Add	LIMITE	N(12,2)
+		
+		Close Databases
+		If Not ExisteCampo('Almacen.LIMITE')
+			Alerta('No se pudo crear el campo LIMITE en Almacen')
+			QuitIt()
+		EndIf
+		
+		Aviso('Se ha creado el campo LIMITE en Almacen')
+	EndIf
+	
+	If Not ExisteCampo('Clientes.LIMCAF')
+		Alter Table Clientes	Add	LIMCAF	N(12,2)
+		Alter Table Clientes	Add	LIMBAR	N(12,2)
+		
+		Close Databases
+		If Not ExisteCampo('Clientes.LIMCAF')
+			Alerta('No se pudo crear el campo LIMCAF en Clientes')
+			QuitIt()
+		EndIf
+		
+		Aviso('Se ha creado el campo LIMCAF en Clientes')
+	EndIf
+	
+	If Not ExisteCampo('Succli.LIMCAF')
+		Alter Table Succli	Add	LIMCAF	N(12,2)
+		Alter Table Succli	Add	LIMBAR	N(12,2)
+		
+		Close Databases
+		If Not ExisteCampo('Succli.LIMCAF')
+			Alerta('No se pudo crear el campo LIMCAF en Familiares')
+			QuitIt()
+		EndIf
+		
+		Aviso('Se ha creado el campo LIMCAF en Familiares')
 	EndIf
  
  EndProc

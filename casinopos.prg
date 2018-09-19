@@ -173,6 +173,18 @@
  		Aviso('Se ha creado el campo de NUMALM en CtasPos')
  	EndIf
  	
+ 	If Not ExisteCampo('CtasPosdet.MEDIDA')
+ 		Alter Table CtasPosDet Add		MEDIDA		C(1)
+ 		
+ 		Close Databases
+ 		If Not ExisteCampo('CtasPosdet.MEDIDA')
+ 			Alerta('No se pudo crear el campo MEDIDA en CtasPos')
+ 			QuitIt
+ 		EndIF
+ 	
+ 		Aviso('Se ha creado el campo de MEDIDA en CtasPosdet')
+ 	EndIf
+ 	
  	If Not ExisteCampo('Almacen.PIDEVEND')
  		Alter Table Almacen Add PIDEVEND	L(1)
  		Alter Table Almacen Add TOUCH		L(1)
