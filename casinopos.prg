@@ -7,7 +7,9 @@
  * GGB 02/2016
  *
  ***
+ public _ls1, _ls2, _ls3
  
+ Dimension _ls1(99), _ls2(99), _ls3(99)
  
  	AddBar('Caja','\-','')
  	AddBar('Caja','Control de Cuentas','Do DoForm With "ctrlctas" In casinopos','CTRL+C')

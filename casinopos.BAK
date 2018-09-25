@@ -24,7 +24,9 @@
  	Set Procedure To casinopos Additive
  
  Return
+ public _ls1, _ls2, _ls3
  
+ Dimension _ls1(99), _ls2(99), _ls3(99)
  
  Procedure CrearTablas
  
@@ -174,11 +176,11 @@
  	EndIf
  	
  	If Not ExisteCampo('CtasPosdet.MEDIDA')
- 		Alter Table CtasPos Add		MEDIDA		C(1)
+ 		Alter Table CtasPosDet Add		MEDIDA		C(1)
  		
  		Close Databases
  		If Not ExisteCampo('CtasPosdet.MEDIDA')
- 			Alerta('No se pudo crear el campo NUMALM en CtasPos')
+ 			Alerta('No se pudo crear el campo MEDIDA en CtasPos')
  			QuitIt
  		EndIF
  	

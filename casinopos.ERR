@@ -1,3 +1,9 @@
+Compiling c:\vfp6\vfp6\puntadelcielo\casinopos.prg
+QuitIt
+Error in line 172: Unrecognized command verb.
+QuitIt
+Error in line 184: Unrecognized command verb.
+
 Program c:\vfp6\vfp6\puntadelcielo\casinopos.prg has the following errors:
     Unknown EXISTECAMPO - Undefined
     Unknown QUITIT - Undefined
@@ -10,6 +16,8 @@ Form c:\vfp6\vfp6\puntadelcielo\opencta.scx has the following errors:
 
 Form c:\vfp6\vfp6\puntadelcielo\addartcs.scx has the following errors:
     Form PIDEVEND - Undefined
+    Unknown _LS1 - Undefined
+    Unknown _LS2 - Undefined
 
 Form c:\vfp6\vfp6\puntadelcielo\devpag.scx has the following errors:
     Unknown SALIDA - Undefined
@@ -18,4 +26,9 @@ Form c:\vfp6\vfp6\puntadelcielo\devpag.scx has the following errors:
 
 Form c:\vfp6\vfp6\puntadelcielo\addartman.scx has the following errors:
     Form PIDEVEND - Undefined
+
+Form c:\vfp6\vfp6\puntadelcielo\asigna.scx has the following errors:
+    Unknown _LS1 - Undefined
+    Unknown _LS2 - Undefined
+    Unknown _LS3 - Undefined
 
