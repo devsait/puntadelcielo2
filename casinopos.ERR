@@ -1,11 +1,3 @@
-Compiling c:\vfp6\vfp6\puntadelcielo\casinopos.prg
-QuitIt
-Error in line 209: Unrecognized command verb.
-QuitIt
-Error in line 221: Unrecognized command verb.
-QuitIt
-Error in line 233: Unrecognized command verb.
-
 Program c:\vfp6\vfp6\puntadelcielo\casinopos.prg has the following errors:
     Unknown EXISTECAMPO - Undefined
     Unknown QUITIT - Undefined

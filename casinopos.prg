@@ -152,7 +152,7 @@
  	EndIf
  	
  	If Not File('Cancelos.DBF')
- 		Create Table Comandas Free (;
+ 		Create Table Cancelos Free (;
  			IDCAN		C(10),;
  			FECHA		D(8),;
  			HORA		C(5),;
