@@ -151,6 +151,43 @@
  	
  	EndIf
  	
+ 	If Not File('Cancelos.DBF')
+ 		Create Table Comandas Free (;
+ 			IDCAN		C(10),;
+ 			FECHA		D(8),;
+ 			HORA		C(5),;
+ 			NUMUSER		C(5),;
+ 			ID			C(10))
+ 		
+ 		Select Cancelos
+ 		Index On IDCAN		Tag	IDCAN
+ 		
+ 		cProcKey = ;
+ 					'Delete Tag All '+Chr(13)+;
+ 					'Index On IDCAN		Tag		IDCAN '+CHR(13)
+ 		
+ 		StrToFile(cProcKey,'Cancelos.Key')
+ 		
+ 		Aviso('Se ha creado la tabla de CANCELOS')
+ 	
+ 	EndIf
+ 	
+ 	
+ 	If Not ExisteCampo('usuarios.CANCELA')
+ 		Alter Table usuarios	Add		CANCELA		C(10)
+ 		
+ 		Close Databases
+ 		IF Not ExisteCampo('usuarios.CANCELA')
+ 			Alerta('No se pudo crear el campo CANCELA en usuarios')
+ 			QuitIt()
+ 		EndIf
+ 		
+ 		Aviso('Se ha creado el campo de CANCELA en Usuarios')
+ 	EndIf
+ 	
+ 	
+ 	
+ 	
  	If Not ExisteCampo('Lineas.NUMALM')
  		Alter Table Lineas	Add		NUMALM		C(2)
  		

@@ -150,6 +150,20 @@
  		Aviso('Se ha creado la tabla de COMANDAS')
  	
  	EndIf
+ 	If Not ExisteCampo('usuarios.CANCELA')
+ 		Alter Table usuarios	Add		CANCELA		C(10)
+ 		
+ 		Close Databases
+ 		IF Not ExisteCampo('usuarios.CANCELA')
+ 			Alerta('No se pudo crear el campo CANCELA en usuarios')
+ 			QuitIt()
+ 		EndIf
+ 		
+ 		Aviso('Se ha creado el campo de CANCELA en Usuarios')
+ 	EndIf
+ 	
+ 	
+ 	
  	
  	If Not ExisteCampo('Lineas.NUMALM')
  		Alter Table Lineas	Add		NUMALM		C(2)
@@ -185,6 +199,18 @@
  		EndIF
  	
  		Aviso('Se ha creado el campo de MEDIDA en CtasPosdet')
+ 	EndIf
+ 	
+ 	If Not ExisteCampo('CtasPosdet.MOSTRAR')
+ 		Alter Table CtasPosDet Add		MOSTRAR		L(1)
+ 		
+ 		Close Databases
+ 		If Not ExisteCampo('CtasPosdet.MOSTRAR')
+ 			Alerta('No se pudo crear el campo MOSTRAR en CtasPos')
+ 			QuitIt
+ 		EndIF
+ 	
+ 		Aviso('Se ha creado el campo de MOSTRAR en CtasPosdet')
  	EndIf
  	
  	If Not ExisteCampo('Almacen.PIDEVEND')
